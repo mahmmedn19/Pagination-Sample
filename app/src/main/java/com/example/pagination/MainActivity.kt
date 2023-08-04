@@ -32,19 +32,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 @Preview(name ="phone", device = Devices.PHONE, showSystemUi = true)
 @Preview(name = "Tablet" , device = Devices.TABLET, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     PaginationTheme {
-        Greeting("Android")
+        HomeScreen()
     }
 }

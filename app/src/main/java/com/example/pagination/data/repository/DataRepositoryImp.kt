@@ -10,7 +10,7 @@ class DataRepositoryImp @Inject constructor() : DataRepository {
     override suspend fun getData(page: Int, limit: Int): List<String> {
         delay(3000L)
         error++
-        if (error == 4)
+        if (error == 6)
             throw IOException("")
         return FakeApi.fetchData(page, limit)
     }
